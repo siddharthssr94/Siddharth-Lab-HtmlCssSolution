@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list-unstyled {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .main-menu {
+            background-color: grey;
+        }
+        
+        .main-menu>li {
+            display: inline-block;
+        }
+        
+        .main-menu>li>a {
+            display: inline-block;
+            padding: 0.5em;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .main-menu>li>a:hover {
+            background-color: black;
+            color: white;
+        }
+        
+        .item-with-sub-menu {
+            position: relative;
+        }
+        
+        .sub-menu {
+            display: none;
+            position: absolute;
+            top: 35px;
+            left: 1em;
+            white-space: nowrap;
+            background-color: whitesmoke;
+        }
+        
+        .sub-menu>li>a {
+            display: inline-block;
+            text-decoration: none;
+            color: darkblue;
+            padding: .5em;
+        }
+        
+        .item-with-sub-menu:hover .sub-menu {
+            display: block;
+        }
+        
+        .banner {
+            padding: 1em;
+            padding-right: 5em;
+            text-align: right;
+            background-color: red;
+            color: black;
+        }
+        
+        .page-title {
+            display: inline;
+        }
+    </style>
+
+    <!-- 3. Stype it -->
+    <!-- on the ul set list-style-type : none (to remove bullets) -->
+    <!-- Remove padding, margin of ul -->
+    <!-- You can git list items side-by-side by making them inline-block -->
+
+</head>
+
+<body>
+    <!-- 1. Create a NAV -->
+    <!-- 2. Place top-level Links in a ul with lis {Link1, Link2, Link3} -->
+    <nav>
+        <div class="banner">
+            <h1 class="page-title">Demo of Dropdown</h1>
+        </div>
+        <div>
+            <ul class="main-menu list-unstyled">
+                <li>
+                    <a href="/link1">Link 1</a>
+                </li>
+                <!-- position: relative -->
+                <li class="item-with-sub-menu">
+                    <a href="/link2">Link 2</a>
+                    <!-- 4. Add another ul within with sub menu {class="sub-menu"} items as list
+                    Make this ul - position:absolute, top: ? -->
+                    <ul class="sub-menu list-unstyled">
+                        <li>
+                            <a href="/link2/DDlink1">DD_link_1</a>
+                        </li>
+                        <li>
+                            <a href="/link2/DDlink2">DD_link_2</a>
+                        </li>
+                        <li>
+                            <a href="/link2/DDlink3">DD_link_3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="item-with-sub-menu">
+                    <a href="/link3">Link 3</a>
+                    <!-- 4. Add another ul within with sub menu {class="sub-menu"} items as list
+                    Make this ul - position:absolute, top: ? -->
+                    <ul class="sub-menu list-unstyled">
+                        <li>
+                            <a href="/link3/DDlink1">DD_link_1</a>
+                        </li>
+                        <li>
+                            <a href="/link3/DDlink2">DD_link_2</a>
+                        </li>
+                        <li>
+                            <a href="/link3/DDlink3">DD_link_3</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+</body>
+
+</html>

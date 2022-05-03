@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: block;
+            width: 194px;
+            margin: 0 auto;
+            padding: 1em;
+            background-color: whitesmoke;
+        }
+        
+        .bar {
+            display: inline-block;
+        }
+        
+        .inner-bar {
+            height: 300px;
+            width: 30px;
+            margin: 1em;
+            background-color: grey;
+        }
+        
+        .bar_30 {
+            background-color: white;
+            animation: bar_30 1s;
+            height: 70%;
+        }
+        
+        .bar_40 {
+            background-color: white;
+            animation: bar_40 1s;
+            height: 60%;
+        }
+        
+        .bar_80 {
+            background-color: white;
+            animation: bar_80 1s;
+            height: 20%;
+        }
+        
+        h1 {
+            margin: auto;
+            text-align: center;
+        }
+        
+        p {
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        @keyframes bar_30 {
+            from {
+                height: 100%;
+            }
+            to {
+                height: 70%;
+            }
+        }
+        
+        @keyframes bar_40 {
+            from {
+                height: 100%;
+            }
+            to {
+                height: 60%;
+            }
+        }
+        
+        @keyframes bar_80 {
+            from {
+                height: 100%;
+            }
+            to {
+                height: 20%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Create a container with gray background -->
+    <!-- This shall have 3 divs for each bar with bg barkgrey {get them nex to each other} -->
+    <div class="container">
+        <div class="bar">
+            <div class="inner-bar">
+                <div class="bar_30"></div>
+            </div>
+            <p>30%</p>
+        </div>
+        <div class="bar">
+            <div class="inner-bar">
+                <div class="bar_40"></div>
+            </div>
+            <p>40%</p>
+        </div>
+        <div class="bar">
+            <div class="inner-bar">
+                <div class="bar_80"></div>
+            </div>
+            <p>80%</p>
+        </div>
+        <h1>Bar Plot</h1>
+    </div>
+</body>
+
+</html>
